@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+<title>Mon super script</title>
+
+</head>
+<body>
+    <p  style="font-size: xx-large; font-family: cursive;" id="sec">
+0
+    </p>
+    
+<script type="text/javascript">
+
+var sec=document.getElementById("sec")
+var second=0
+var muniteur=setInterval(function(){
+    sec.innerHTML=second
+    if(second<30){
+        second+=1
+    }
+},1000)
+      
+</script>
+      
+</body>
+</html>

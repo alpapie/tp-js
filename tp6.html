@@ -1,0 +1,21 @@
+<script>
+     var note,notes=[],moyenne;
+
+    while(note=parseInt(prompt("veiller entrer les notes "))){
+        notes.push(note);
+        
+           } 
+           console.log(notes)
+       notes.reduce(function(somme,chiffe){
+
+          return moyenne = chiffe + somme; 
+        })
+    
+             moyenne=moyenne/notes.length           
+        let filtres=notes.filter( function(chiffe){
+        return chiffe >=moyenne
+        })
+
+        document.write("la moyenne est <b>"+moyenne+"</b> ET les notes supérieures ou égales à cette moyenne sont :<br>")
+        
+</script>

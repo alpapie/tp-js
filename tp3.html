@@ -1,0 +1,44 @@
+<script>
+    var i = 1,  nbr = Number(prompt("Entrer un nombre "));
+    let nbrLettre="";
+    switch (nbr) {
+      case 1:nbrLettre="un" ;break;
+    
+        case 2:nbrLettre="deux" ;break;
+      
+        case 3:nbrLettre="trois" ;break;
+        
+        case 4:nbrLettre="Quatre" ;break;
+        
+        case 5:nbrLettre="cinq" ;break;
+      
+        case 6:nbrLettre="six" ;break;
+        
+        case 7:nbrLettre="sept" ;break;
+
+        case 8:nbrLettre="hiut" ;break;
+
+        case 9:nbrLettre="neuf" ;break;
+
+
+      default:
+        break;
+    }
+    
+    document.write("<p>liste des multiples inférieurs à cinquante (50) de<b> "+nbrLettre+" </b></p><br><br>")
+    if (nbr > 0) {
+        var nbrs=nbr*i;
+        i++
+        do{
+            document.write("<li><b>"+nbrs+"</b></li>"); 
+             nbrs = nbr*i;
+             i++;
+        }
+          while (nbrs < 50)
+          
+        } else{
+          
+          alert("veiller entrer un nombre superieur a 0");
+        }
+        
+</script>

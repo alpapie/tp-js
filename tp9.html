@@ -1,0 +1,38 @@
+<style>
+    div{
+    border: 1px solid black;
+    height: 300px;
+    }
+    div#drapeau div{
+    float: left;
+    width: 33.1%;
+    }
+    div#vert{
+    background-color: green;
+    }
+    </style>
+    <div id="drapeau">
+    <div id="vert">
+    Cliquez ici pour colorer la partie jaune
+    </div >
+    <div id="jaune"></div>
+    </div>
+    
+    <script>
+        var newdrapeau =document.getElementById("drapeau");
+        var colorvert =document.getElementById("vert");
+        var colorjaune =document.getElementById("jaune");
+        
+        colorvert.addEventListener('click',function(){
+          colorjaune.style.backgroundColor='yellow';
+           colorjaune.innerHTML="<b>Cliquez ici pour créer la partie rouge</b>"
+           colorvert.innerHTML=" "
+            
+        }) 
+        let newdiv =document.createElement("div");
+        colorjaune.addEventListener('click', function(){
+             newdiv.style.backgroundColor='red'
+            colorjaune.innerHTML=" "
+        })
+         newdrapeau.insertBefore(newdiv,newdrapeau.colorjaune);
+    </script>

@@ -1,0 +1,18 @@
+<script>
+           var a=Number(prompt("veiller Entrer la premiére note"))
+           var b=Number(prompt("veiller Entrer la deuxiéme note"))
+           var c=Number(prompt("veiller Entrer la troisiémes note"))
+    function moyenne(a,b,c){
+        
+      return (a+b+c)/3;
+    } 
+        let m=moyenne(a,b,c);
+        function afficher(m){
+        if (m >= 10) {
+            document.write(m+" <b>est suffisant pour passer en classe supérieure </b>")
+        }else{
+            document.write(m+" <b>est insuffisant pour passer en classe supérieure </b>")
+            }
+        }
+       afficher(m);
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Equation du second degré</h1> <h1></h1>
+    <script>
+        var d , f ,X1 ,X2,X0;
+var a =prompt("Entrer la valeur A de AX2 +Bx + C");
+        var b =prompt("Entrer la valeur B de AX2 +Bx + C");
+        var c =prompt("Entrer la valeur C de AX2 +Bx + C");
+
+        d =(b*b)-4*(a*c)
+         f = Math.sqrt((b*b)-4*(a*c));
+    
+        if(d > 0){
+                X1 = (-b-f)/(2*a);
+                X2 = (f-b)/(2*a);
+                document.write('<h1><div class="vert"> Deux solutions distinctes égale a </div> </h1> <h2> X1= '+X1+"    et   X2 ="+X2+'</h2>');
+                    } else if(d === 0){
+                        X0=(-b/(2*a));
+                        document.write('<h1><div class="orange"> une solution double égale a </div>X0= '+X0+'</h1>');
+                    }else{
+                        document.write('<h1><div class="rouge">Pas de solution!!! </div></h1>')
+                    }
+    </script>
+    <style>
+        .vert{
+            color: green;
+        }
+        .orange{
+            color: orange;
+        }
+        .rouge{
+            color: red;
+        }
+    
+    </style>
+</body>
+</html>

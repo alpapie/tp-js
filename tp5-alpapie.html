@@ -1,0 +1,20 @@
+<button id="survole">Survolez-moi !</button>
+
+<script>
+
+     let changebnt =  document.getElementById("survole");
+     let i=0;
+    changebnt.addEventListener('mouseover',function(){
+              changebnt.innerHTML = "<b>Pourquoi m’avez-vous survolé </b>"; i++;
+               
+                if(i > 1){
+                changebnt.innerHTML = "<b>Pourquoi m’avez-vous survolé pour la"+i+"ème fois ? <b>";
+                
+                    }
+                    
+                 
+            })
+     changebnt.addEventListener('mouseout',function(){
+              changebnt.innerHTML = "<b>Survolez-moi encore</b>";
+            })
+</script>

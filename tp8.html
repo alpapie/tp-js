@@ -1,0 +1,39 @@
+<script>
+   var  confirmer ,nom = prompt("Veiller entrer votre nom") ;
+    function diresalut(){
+        prompt("salut "+nom+" comment sava")
+    }
+     var interval= setInterval(diresalut,4000)
+      var i
+     setTimeout(function (){
+      confirmer = Boolean(confirm("Arrêtter les salutations !"));  
+  
+
+            },12000)
+            setTimeout(function(){
+              if (confirmer===true){
+                    clearInterval(interval)
+                    alert("Arrêt des salutations !")
+              }else if(confirmer===false && i<5){
+                      var stop = setInterval(arret,12000);
+                      function arret() {
+                     confirm("souhaitez vous arreter les salutation?");
+                  if (true) {
+                      alert("arret des salutations");
+                      clearInterval(it);
+                      clearInterval(stop)
+            }
+        }
+              }
+            },12000)
+           
+        
+
+           /* 
+           3) Quand le client decline cette solution
+             on aura un affichage du message de salutation 
+             qui s'affiche a l'infini sur un intervale de 4s
+             
+            */
+            
+</script>

@@ -1,0 +1,20 @@
+<script>
+        var newphrase,phrase=prompt("Entre la phrase a mettre en majuscule")
+        var mjphrase=phrase.toLowerCase().split(" ")
+        let array=[]
+        
+        function majuscule(majphrase){
+    
+            mjphrase.forEach(mjphrase => {
+              let  premlet =mjphrase.charAt(0).toUpperCase();
+                let lettrreplace=mjphrase.replace(mjphrase.charAt(0),premlet)
+                array.push(lettrreplace);
+                newphrase=array.join(' ')
+            });
+            document.write("<b>"+newphrase+"<b>")
+        }
+          document.write("<b>votre phrase en majuscule est :<b><br><br>");
+          majuscule(newphrase)
+        
+    
+    </script>

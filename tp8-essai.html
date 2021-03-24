@@ -1,0 +1,26 @@
+<script>
+let nbrDeSalutations=0;
+
+let saluer=()=>{
+  prompt("Bonjour");
+  nbrDeSalutations++;
+
+  if (nbrDeSalutations === 3) {
+   arreter();
+  }
+}
+let arreter =()=>{
+  let ok =confirm("Souhaiter-vous arreter les salutations?");
+    if (ok) {
+      alert("Arret des Salutations");
+      clearInterval(idSaluer);
+    }
+}
+setTimeout(function(){
+  clearInterval(idArret)
+},30000)
+let idSaluer=setInterval(saluer,4000);
+let idArret=setInterval(arreter,15000);
+
+
+</script>

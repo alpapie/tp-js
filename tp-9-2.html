@@ -1,0 +1,44 @@
+<style>
+   div{
+   border: 1px solid black;
+   height: 300px;
+   }
+   div#drapeau div{
+   float: left;
+   width: 33.1%;
+   }
+   div#vert{
+   background-color: green;
+   }
+   </style>
+   <div id="drapeau">
+   <div id="vert">
+       <span id="texte">
+   Cliquez ici pour colorer la partie jaune
+</span>
+   </div >
+   <div id="jaune"> <span id="textejaune"></span></div>
+   </div>
+   
+   <script>
+       var newdrapeau =document.getElementById("drapeau");
+       var texte=document.getElementById("texte")
+       var colorvert =document.getElementById("vert");
+       var colorjaune =document.getElementById("jaune");
+       var textejaune=document.getElementById("textejaune")
+
+       colorvert.addEventListener('click',function(){
+          colorjaune.style.backgroundColor='yellow';
+          textejaune.innerHTML="<b>Cliquez ici pour créer la partie rouge</b>"
+          let suprime=colorvert.removeChild(texte)
+           
+       }) 
+
+       let newdiv =document.createElement("div");
+
+            colorjaune.addEventListener('click', function(){
+            newdiv.style.backgroundColor='red'
+            let suprime2=colorjaune.removeChild(textejaune )
+       })
+        newdrapeau.insertBefore(newdiv,newdrapeau.colorjaune);
+   </script>

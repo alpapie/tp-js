@@ -1,0 +1,53 @@
+<form action="">
+    <label for="prenom">prenom</label><br>
+        <input type="text" id="prenom"> <span id="alert1"> </span><br><br
+    <label for="age" >Age</label><br>
+        <input type="text" id="age"><span id="alert2"> </span><br><br>
+
+        <label >votre langue maternelle</label><br>
+        <input type="radio" name="langue" value="1">Pulaar
+        <input type="radio" name="langue" value="2">Wolof
+        <input type="radio" name="langue" value="1">sérére<br><br>
+    <label >Quelles langue comprenez vous </label><br>
+        <INPUT type="checkbox" name="choix1" value="1"> Pulaar
+        <INPUT type="checkbox" name="choix2" value="2"> Wolof
+        <INPUT type="checkbox" name="choix3" value="3">Sérére
+        <INPUT type="checkbox" name="choix3" value="4">Francais
+        <INPUT type="checkbox" name="choix4" value="5"> Anglais<br><br>
+          <button type="submit" id="envoie">Envoyer</button>
+</form>
+<script>
+    var alertprenom=document.getElementById("alert1")
+    var alertAge=document.getElementById("alert2")
+    var prenom=document.getElementById("prenom");
+    var age=document.getElementById("age");
+    var submits=document.getElementById("envoie");
+ 
+    
+    prenom.addEventListener('focusout',function(){
+        var valueprenom = prenom.value;
+        if(valueprenom==""){
+            alertprenom.innerHTML="veiller remplir le champ"
+            alertprenom.style.color='red'
+            }else if(valueprenom!=""){
+                alertprenom.innerHTML=""
+            }
+    })
+    
+    age.addEventListener('focusout',function(){
+        var ages = age.value;
+        if(ages=="" | isNaN(ages)){
+            alertAge.innerHTML="veiller remplir le champ avec un nombre"
+            alertAge.style.color='red'
+            }else if(ages!="" | !(isNaN(ages))){
+                alertAge.innerHTML=""
+            }
+    })   
+
+    submits.addEventListener('click',function(){
+        var valueprenom = prenom.value;
+        var valuesages = age.value;
+        alert("les information valide sont: votre prenom "+valueprenom+" et l'age "+valuesages)
+    })
+
+</script>
